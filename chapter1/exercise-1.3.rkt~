@@ -1,0 +1,6 @@
+#lang sicp
+
+(define (sum-of-squares-highest x y z)
+  (cond (and (>= a b) (>= b c))(sum-of-squares a b)))
+
+(sum-of-squares-highest 5 4 3)

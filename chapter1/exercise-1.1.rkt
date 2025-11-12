@@ -18,7 +18,10 @@
 ;; Expected: 6
 
 (define a 3)
+;; a := 3
+
 (define b (+ a 1))
+;; b := 4
 
 (+ a b (* a b))
 ;; Expected: 19
@@ -35,3 +38,13 @@
       ((= b 4) (+ 6 7 a))
       (else 25))
 ;; Expected: 16
+
+(+ 2 (if (> b a) b a))
+;; Expected 6
+
+(* (cond ((> a b) a)
+   ((< a b) b)
+   (else -1))
+   (+ a 1))
+;; Expected 16
+
